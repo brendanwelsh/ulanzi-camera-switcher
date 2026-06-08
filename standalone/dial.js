@@ -1,45 +1,24 @@
-// Ulanzi Stream Controller D200 input parsing (VID 0x2207 / PID 0x0019).
+// Input parsing for the actual hardware: a Ulanzi D100H, which on this machine enumerates
+// as "Dial_Lite" (KEHWIN, VID 0xfff1 / PID 0x0082) — a cheap dial that emulates a VOLUME KNOB.
 //
-// Report framing reused from the sister ulanzi-synth project's findings:
-//   0x7c 0x7c [cmd:u16 BE] [len:u32 LE] [payload...]
-//   IN_BUTTON cmd 0x0101, payload [state, index, type, action]
-//     type   0x02 = encoder (the dial), else a physical key
-//     action 0x01 = press, 0x02 = rotate left, 0x03 = rotate right, else release
+// Its events arrive on the Consumer Control HID interface (usagePage 0x0c) as 3-byte reports
+// `[reportId, usageLow, usageHigh]`, i.e. a little-endian 16-bit consumer usage code:
+//   0x00E9 Volume Up    (rotate one way)
+//   0x00EA Volume Down  (rotate the other way)
+//   0x00E2 Mute         (press)
+//   0x0000 release      (key up — ignore)
 //
-// ulanzi-synth read this over WebHID (where e.data excludes the report id). node-hid
-// hands us a raw Buffer that MAY carry a leading report-id byte, so rather than assume
-// the frame starts at offset 0 we locate the 0x7c 0x7c marker and parse relative to it.
+// (The old D200 `7c 7c` parser is gone — that device was never the real hardware.)
 
-const IN_BUTTON = 0x0101;
-const FRAME = [0x7c, 0x7c];
+export const CONSUMER = { VOL_UP: 0x00e9, VOL_DOWN: 0x00ea, MUTE: 0x00e2 };
 
-// index of the start of the framed report, or -1 if this buffer isn't one
-export function findFrame(buf) {
-  for (let i = 0; i + 11 < buf.length; i++) {
-    if (buf[i] === FRAME[0] && buf[i + 1] === FRAME[1]) return i;
-  }
-  return -1;
-}
-
-// Decode one input report into an intent, or null if it isn't a button/dial report.
-//   { kind: "rotate", delta: -1 | +1 }   dial turned
-//   { kind: "press" }                    dial pushed
-//   { kind: "button", index, pressed }   a physical key
-export function parseReport(buf) {
-  const off = findFrame(buf);
-  if (off < 0) return null;
-  const cmd = (buf[off + 2] << 8) | buf[off + 3];
-  if (cmd !== IN_BUTTON) return null;
-
-  const index = buf[off + 9];
-  const type = buf[off + 10];
-  const action = buf[off + 11];
-
-  if (type === 0x02) {
-    if (action === 0x02) return { kind: "rotate", delta: -1 };
-    if (action === 0x03) return { kind: "rotate", delta: +1 };
-    if (action === 0x01) return { kind: "press" };
-    return null; // dial release — ignore
-  }
-  return { kind: "button", index, pressed: action === 0x01 };
+// Decode one Consumer Control report into { kind, code } or null.
+//   { kind: "consumer", code }  a usage was pressed (code is the 16-bit usage)
+//   { kind: "release" }         everything released
+export function parseConsumer(buf) {
+  if (!buf || buf.length < 3) return null;
+  // report layout: [reportId, usageLow, usageHigh]
+  const code = buf[1] | (buf[2] << 8);
+  if (code === 0) return { kind: "release" };
+  return { kind: "consumer", code };
 }

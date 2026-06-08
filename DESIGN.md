@@ -63,6 +63,27 @@ We built **both** paths and let them share a single mpv viewer engine
   imports it, the plugin ships a synced copy (`npm run build`) so its folder is self-contained when
   zipped. `cam-center.ps1` is reused as-is for the maximize.
 
+## Hardware reality — it's a D100H, not a D200 (updated 2026-06-08)
+The two-front-end architecture above stands. The device assumptions in the bullets above do **not** —
+they described a D200 we never had. The real dial is a **Ulanzi D100H Dial Creative Controller**:
+- **Bluetooth-only** (USB-C charges only, no wired data). Its HID descriptor reports the generic
+  BLE-chipset identity **"KEHWIN / Dial_Lite" `0xfff1:0x0082`**, which is why it first looked non-Ulanzi.
+- 7 RGB buttons + a knob. Default "Standalone-mode" codes (captured + confirmed in the manual):
+  knob = Volume Up/Down + Mute; 3 buttons = Prev / Play-Pause / Next (media — HID-readable on the
+  Consumer interface `if1`); 4 buttons = Copy / Paste / Undo / Redo (Ctrl keys — Windows hides the
+  keyboard HID interface, so raw HID can't read them).
+- The D200 `7c 7c` details above are therefore **historical**. `standalone/` was retargeted to the
+  D100H's real consumer codes (`standalone/dial.js` now parses Consumer Control) and it connects — but
+  every default code also drives Windows (volume/media side-effects) and 4 buttons are invisible.
+
+**Implication for the two front-ends:**
+- `standalone/` (raw HID) fights this device: audio side-effects + 4 unreadable buttons.
+- The D100H is *designed* to be remapped in **Ulanzi Studio**. The clean path (being decided in-app):
+  either the `plugin/` actions bind to the D100H directly, OR we remap its 7 buttons to inert keys
+  (F13–F19) in Ulanzi Studio and a small listener maps those to the shared engine.
+- OPEN: confirm in Ulanzi Studio whether the D100H accepts a custom plugin action or only keyboard
+  shortcuts/presets — that picks plugin-binds vs remap-to-keys.
+
 ## New feature: per-button jump-to-camera
 Beyond the dial scroller, a button jumps straight to one camera (`viewer.jumpTo`) — opening if closed,
 switching in place if open; pressing the button for the camera already showing closes it (mirrors the

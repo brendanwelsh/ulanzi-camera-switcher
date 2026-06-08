@@ -37,7 +37,11 @@ function loadConfig() {
 }
 
 const $UD = new UlanziApi();
-const log = (m) => { try { $UD.logMessage("[camera-scroller] " + m); } catch (e) {} };
+const LOGFILE = path.join(PLUGIN_ROOT, "camera-scroller.log");
+const log = (m) => {
+  try { $UD.logMessage("[camera-scroller] " + m); } catch (e) {}
+  try { fs.appendFileSync(LOGFILE, new Date().toISOString() + " " + m + "\n"); } catch (e) {}
+};
 
 let cfg = loadConfig();
 let viewer = cfg ? new CameraViewer(cfg, log) : null;
@@ -49,10 +53,8 @@ const paramOf = (m) => m.param || m.payload || m.settings || {};
 // remember each jump button's chosen camera by context, so onRun is instant + robust
 const jumpCam = new Map();
 
+// any action instance that carries a cameraName is a Camera Button — cache it + label the key
 function rememberJump(message) {
-  let actionid;
-  try { ({ actionid } = $UD.decodeContext(message.context)); } catch (e) { return; }
-  if (actionid !== ACTION_JUMP) return;
   const name = paramOf(message).cameraName;
   if (name) {
     jumpCam.set(message.context, name);
@@ -68,10 +70,9 @@ $UD.onConnected(() => {
 });
 
 $UD.onAdd((message) => {
-  let actionid;
-  try { ({ actionid } = $UD.decodeContext(message.context)); } catch (e) { return; }
-  if (actionid === ACTION_JUMP) rememberJump(message);
-  else if (actionid === ACTION_SCROLLER) $UD.setStateIcon(message.context, 0, "CAMERAS");
+  // a Camera Button carries a cameraName in its settings; the Camera Scroller (dial) does not
+  if (paramOf(message).cameraName) rememberJump(message);
+  else $UD.setStateIcon(message.context, 0, "CAMERAS");
 });
 
 // settings changed in a Property Inspector (host pushes them back to us)
@@ -96,15 +97,13 @@ $UD.onDialDown((message) => {
   $UD.setStateIcon(message.context, 0, cam ? cam.name : "CAMERAS");
 });
 
-// ── keypad (Camera Button) ───────────────────────────────────────────────────
+// ── keypad: a key press is always our only Keypad action (Camera Button) ──────
 $UD.onRun((message) => {
-  let actionid;
-  try { ({ actionid } = $UD.decodeContext(message.context)); } catch (e) { return; }
-  if (actionid !== ACTION_JUMP) return;
-  if (!viewer) return $UD.showAlert(message.context);
+  if (!viewer) { log("key press but config missing"); return $UD.showAlert(message.context); }
   const name = jumpCam.get(message.context) || paramOf(message).cameraName;
   const idx = camIndexByName(name);
-  if (idx < 0) { log(`jump: no camera "${name}" in config`); return $UD.showAlert(message.context); }
+  log(`key press -> "${name}" (idx ${idx})`);
+  if (idx < 0) return $UD.showAlert(message.context);
   viewer.jumpTo(idx);
 });
 
