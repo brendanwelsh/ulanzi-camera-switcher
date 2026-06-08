@@ -1,0 +1,23 @@
+{
+  "_comment": "Copy this file to config.json and fill in your real values. config.json is gitignored so your NVR address and camera IDs never reach git.",
+
+  "nvr": "NVR_HOST_OR_IP:7441",
+  "mpvPath": "C:\\Users\\you\\AppData\\Local\\Programs\\mpv.net\\mpvnet.exe",
+  "scriptsDir": "C:\\Users\\you\\StreamDeckScripts",
+  "ipcPipe": "\\\\.\\pipe\\mpv-cam",
+  "mpvProcess": "mpvnet.exe",
+
+  "device": { "vendorId": "0x2207", "productId": "0x0019" },
+
+  "cameras": [
+    { "name": "CAM 1", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
+    { "name": "CAM 2", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
+    { "name": "CAM 3", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" }
+  ],
+
+  "buttons": {
+    "0": "CAM 1",
+    "1": "CAM 2",
+    "2": "CAM 3"
+  }
+}

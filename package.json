@@ -1,0 +1,17 @@
+{
+  "name": "ulanzi-camera-switcher",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ulanzi dial -> UniFi Protect camera scroller. Two front-ends (standalone USB-HID daemon + Ulanzi Deck plugin) sharing one mpv viewer engine.",
+  "scripts": {
+    "start": "npm --prefix standalone start",
+    "learn": "npm --prefix standalone run learn",
+    "build": "node scripts/sync-engine.mjs",
+    "setup:standalone": "npm --prefix standalone install",
+    "setup:plugin": "npm --prefix plugin/com.ulanzi.camerascroller.ulanziPlugin install",
+    "install:plugin": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/install-plugin.ps1",
+    "pack": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/pack-plugin.ps1",
+    "test": "node test/smoke.mjs"
+  }
+}

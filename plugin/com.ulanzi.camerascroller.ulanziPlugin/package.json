@@ -1,0 +1,11 @@
+{
+  "name": "com.ulanzi.camerascroller.ulanziPlugin",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Ulanzi Deck plugin: scroll/jump UniFi Protect cameras in an mpv.net viewer.",
+  "main": "plugin/app.js",
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "Author": "Welsh",
+  "Name": "Camera Scroller",
+  "Description": "Scroll and jump UniFi Protect cameras in a maximized mpv.net viewer, from the Ulanzi dial and buttons.",
+  "Icon": "resources/pluginIcon.png",
+  "Version": "1.0.0",
+  "Category": "Camera Scroller",
+  "CategoryIcon": "resources/categoryIcon.png",
+  "CodePath": "plugin/app.js",
+  "Type": "JavaScript",
+  "UUID": "com.ulanzi.ulanzistudio.camerascroller",
+  "Actions": [
+    {
+      "Name": "Camera Scroller",
+      "Icon": "resources/action.png",
+      "PropertyInspectorPath": "property-inspector/scroller/inspector.html",
+      "state": 0,
+      "States": [
+        { "Name": "Cameras", "Image": "resources/camera.png" }
+      ],
+      "Tooltip": "Rotate to switch cameras, press to open/close the viewer",
+      "UUID": "com.ulanzi.ulanzistudio.camerascroller.scroller",
+      "SupportedInMultiActions": false,
+      "Controllers": ["Encoder"],
+      "Encoder": {
+        "layout": "$UA1",
+        "TriggerDescription": {
+          "Rotate": "Switch camera",
+          "Push": "Open / close viewer"
+        }
+      }
+    },
+    {
+      "Name": "Camera Button",
+      "Icon": "resources/action.png",
+      "PropertyInspectorPath": "property-inspector/button/inspector.html",
+      "state": 0,
+      "States": [
+        { "Name": "Camera", "Image": "resources/camera.png" }
+      ],
+      "Tooltip": "Jump straight to a chosen camera",
+      "UUID": "com.ulanzi.ulanzistudio.camerascroller.jump",
+      "SupportedInMultiActions": true,
+      "Controllers": ["Keypad"]
+    }
+  ],
+  "OS": [
+    { "Platform": "windows", "MinimumVersion": "10" }
+  ],
+  "Software": {
+    "MinVersion": "2.1.0"
+  }
+}

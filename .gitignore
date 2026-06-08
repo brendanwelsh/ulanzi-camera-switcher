@@ -2,6 +2,11 @@ node_modules/
 dist/
 build/
 *.log
+
+# Real config holds the NVR address + UniFi camera IDs — never commit it.
+# Commit config.example.json instead.
+config.json
+config.local.json
 .env
 .env.*
 !.env.example

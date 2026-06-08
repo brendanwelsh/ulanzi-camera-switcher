@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../libs/css/uspi.css" />
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+</head>
+<body>
+  <div class="uspi-wrapper">
+    <form id="property-inspector">
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Dial</div>
+        <div class="uspi-item-value" style="font-size:12px;opacity:.8;line-height:1.5">
+          <b>Rotate</b> → next / previous camera.<br />
+          <b>Push</b> → open / close the maximized viewer.
+        </div>
+      </div>
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Cameras</div>
+        <div class="uspi-item-value" id="summary" style="font-size:12px;opacity:.7">
+          configured in the plugin's <b>config.json</b>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    $UD.connect("com.ulanzi.ulanzistudio.camerascroller.scroller");
+    $UD.onConnected(() => $UD.sendToPlugin({ type: "getCameras" }));
+    $UD.onSendToPropertyInspector((message) => {
+      const data = message.param || message.payload || message.settings || {};
+      if (data.type === "cameras") {
+        const n = (data.cameras || []).length;
+        const nvr = data.nvr ? " • NVR " + data.nvr : "";
+        document.getElementById("summary").textContent = n + " cameras" + nvr;
+      }
+    });
+  </script>
+</body>
+</html>

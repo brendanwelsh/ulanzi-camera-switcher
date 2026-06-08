@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="../../libs/css/uspi.css" />
+  <script src="../../libs/js/constants.js"></script>
+  <script src="../../libs/js/eventEmitter.js"></script>
+  <script src="../../libs/js/timers.js"></script>
+  <script src="../../libs/js/utils.js"></script>
+  <script src="../../libs/js/ulanziApi.js"></script>
+</head>
+<body>
+  <div class="uspi-wrapper">
+    <form id="property-inspector">
+      <div class="uspi-item">
+        <div class="uspi-item-label" data-localize>Camera</div>
+        <select class="uspi-item-value" name="cameraName" id="cameraSelect">
+          <option value="" data-localize>Loading…</option>
+        </select>
+      </div>
+      <div class="uspi-item">
+        <div class="uspi-item-label"></div>
+        <div class="uspi-item-value" style="font-size:12px;opacity:.7;line-height:1.4">
+          Pressing this key jumps straight to the selected camera. The camera list comes
+          from the plugin's <b>config.json</b>.
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const ACTION = "com.ulanzi.ulanzistudio.camerascroller.jump";
+    const select = document.getElementById("cameraSelect");
+    let savedParam = null;
+
+    $UD.connect(ACTION);
+
+    function applySaved() {
+      if (savedParam && select.options.length) Utils.setFormValue(savedParam, "#property-inspector");
+    }
+
+    function fillOptions(names) {
+      select.innerHTML = "";
+      for (const n of names) {
+        const o = document.createElement("option");
+        o.value = n;
+        o.textContent = n;
+        select.appendChild(o);
+      }
+      applySaved();
+    }
+
+    function requestCameras() { $UD.sendToPlugin({ type: "getCameras" }); }
+
+    $UD.onConnected(requestCameras);
+
+    $UD.onAdd((message) => {
+      savedParam = message.param || null;
+      applySaved();
+      requestCameras();
+    });
+
+    $UD.onSendToPropertyInspector((message) => {
+      const data = message.param || message.payload || message.settings || {};
+      if (data.type === "cameras") fillOptions(data.cameras || []);
+    });
+
+    document.getElementById("property-inspector").addEventListener("change", () => {
+      const params = Utils.getFormValue("#property-inspector");
+      $UD.sendParamFromPlugin(params);
+    });
+  </script>
+</body>
+</html>

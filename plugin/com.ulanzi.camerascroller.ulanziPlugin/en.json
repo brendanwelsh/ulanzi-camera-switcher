@@ -1,0 +1,20 @@
+{
+  "Name": "Camera Scroller",
+  "Description": "Scroll and jump UniFi Protect cameras in a maximized mpv.net viewer, from the Ulanzi dial and buttons.",
+  "Actions": [
+    {
+      "Name": "Camera Scroller",
+      "Tooltip": "Rotate to switch cameras, press to open/close the viewer"
+    },
+    {
+      "Name": "Camera Button",
+      "Tooltip": "Jump straight to a chosen camera"
+    }
+  ],
+  "Localization": {
+    "Camera": "Camera",
+    "Dial": "Dial",
+    "Cameras": "Cameras",
+    "Loading…": "Loading…"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "ulanzi-camera-switcher-standalone",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Standalone front-end: Ulanzi dial over USB HID -> shared mpv camera viewer.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "learn": "node index.js --learn"
+  },
+  "dependencies": {
+    "node-hid": "^3.1.2"
+  }
+}

@@ -36,20 +36,55 @@ Either way, the smart move is to **reuse `cam-scroll.ps1`** (it already maintain
 state and the mpv IPC viewer) rather than reimplement the camera logic. The Ulanzi plugin/HID layer
 is just a new *input* into the same engine.
 
-## Open questions for the session
-- Confirm the exact Ulanzi dial model + how the SDK exposes rotate/press (and whether it can render
-  the camera name on the dial LCD, like the Stream Deck+ version does).
-- Decide path A (SDK plugin) vs B (HID) — coordinate with `ulanzi-synth`'s dial-input findings.
-- Should the runtime scripts (`cam-*.ps1`) move into `streamdeck-cameradials` as the single home,
-  with both the Stream Deck+ and Ulanzi front-ends depending on it? (Reorg decision.)
+## Decision: build BOTH front-ends over one shared engine
+We built **both** paths and let them share a single mpv viewer engine
+(`shared/camera-viewer.js`), so there's a choice + something shareable:
 
-## Roadmap
-1. Get one Ulanzi dial rotate + press event into a script (path A or B).
-2. Wire rotate → `cam-scroll.ps1 next|prev`, press → `cam-scroll.ps1 toggle`. Working scroller.
-3. Mirror the dial-LCD feedback (camera name / LIVE) if the SDK allows.
-4. Package + document install.
+| | `standalone/` (Path B — USB HID) | `plugin/` (Path A — Ulanzi Deck plugin) |
+|---|---|---|
+| Depends on UlanziStudio | No | Yes (runs inside it) |
+| Input | reads the dial's raw HID reports | gets dial/key events from UlanziStudio |
+| Best for | a self-contained always-on switcher | drag-and-drop config + **sharing with others** |
+| Config | `config.json` (incl. `buttons` index→camera map) | `config.json` + per-key camera picked in the Property Inspector |
+
+**Why this shape:**
+- **The HID hard part was already done.** `ulanzi-synth/src/input/dial.ts` decoded the D200 protocol —
+  VID `0x2207` / PID `0x0019`, reports framed `7c 7c [cmd BE] [len LE] [state index type action]`,
+  `IN_BUTTON 0x0101`, `type 0x02` = dial, `action` 0x01 press / 0x02 left / 0x03 right. The standalone
+  ports that parser to `node-hid` (scanning for the `7c 7c` marker so a leading report-id byte doesn't
+  matter).
+- **The plugin uses the official SDK so it's installable/shareable.** A `.js` `CodePath` runs under
+  the host's Node.js v20, so the plugin (`plugin/app.js`) drives the same engine — `onDialRotate` →
+  `rotate()`, `onDialDown` → `togglePress()`, key `onRun` → `jumpTo()`. The Node SDK (`common-node`)
+  is vendored as `ulanzi-api/`; the Property-Inspector SDK (`common-html`) as `libs/`.
+- **One engine, not two.** The real viewer (mpv JSON-IPC in-place switching, maximize, debounce) was in
+  `streamdeck-cameradials/plugin.js`, NOT `cam-scroll.ps1` (that ps1 just `Start-Process`es mpv with no
+  IPC + a hard-wired list). It's lifted into `shared/camera-viewer.js`, config-driven; the standalone
+  imports it, the plugin ships a synced copy (`npm run build`) so its folder is self-contained when
+  zipped. `cam-center.ps1` is reused as-is for the maximize.
+
+## New feature: per-button jump-to-camera
+Beyond the dial scroller, a button jumps straight to one camera (`viewer.jumpTo`) — opening if closed,
+switching in place if open; pressing the button for the camera already showing closes it (mirrors the
+Stream Deck grid's `cam-open.ps1` toggle).
+- **Standalone:** `config.buttons` maps the dial's physical key index → camera name. `npm run learn`
+  prints each key's index for mapping (the D200's real indices are confirmed on-device this way).
+- **Plugin:** drop a **Camera Button** action on any key and pick its camera from a dropdown in the
+  Property Inspector (the camera list is pushed from the main service). No file editing per button.
+
+## Not hard-wired
+NVR address, camera list, mpv path, scripts dir, IPC pipe (and, for the standalone, the button map) all
+live in `config.json` (gitignored, one per front-end, same schema). `shared/`, `standalone/*.js`, and
+`plugin/plugin/app.js` contain no addresses or camera IDs. Each ships a `config.example.json`.
+
+## Dial-LCD feedback
+- **Plugin:** the camera name IS shown on the key/dial via `setStateIcon(context, 0, name)` + the `$UA1`
+  encoder layout — so the plugin gets the Stream Deck+-style label for free.
+- **Standalone:** the D200 screen-write HID protocol wasn't in ulanzi-synth's input-only findings, so it
+  relies on mpv's on-screen "Swapping to …" overlay. Revisit via the Bitfocus Companion D200 project.
 
 ## References
-- `streamdeck-cameradials` (the Stream Deck+ original being mirrored)
-- `streamdeck-scripts/cam-scroll.ps1` (the reusable camera engine)
-- UlanziTechnology/UlanziDeckPlugin-SDK
+- `streamdeck-cameradials` (the Stream Deck+ original; source of the viewer engine)
+- `streamdeck-scripts/cam-center.ps1` (reused for window maximize)
+- `ulanzi-synth/src/input/dial.ts` (decoded the D200 HID protocol)
+- UlanziTechnology/UlanziDeckPlugin-SDK (`manifest.md`, `common-node`, `common-html`)
