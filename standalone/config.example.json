@@ -1,18 +1,18 @@
 {
-  "_comment": "Copy to config.json and fill in. config.json is gitignored so your NVR + camera IDs never reach git. `device` targets the dial's HID interface; `dial` maps its consumer codes to actions (rotate `node index.js --learn` and turn the dial to discover codes / flip direction).",
+  "_comment": "Copy to config.json (gitignored). Each camera is EITHER a full stream `url` (any RTSP/RTSPS/HTTP — UniFi, Reolink, Frigate, ONVIF...), OR an `id` built into a URL via `urlTemplate` + `nvr` (default template is UniFi Protect). `device`/`dial` target the HID dial; run `node index.js --learn` and turn the dial to discover codes.",
 
   "nvr": "NVR_HOST_OR_IP:7441",
+  "urlTemplate": "rtsps://{nvr}/{id}?enableSrtp",
+
   "mpvPath": "C:\\Users\\you\\AppData\\Local\\Programs\\mpv.net\\mpvnet.exe",
-  "scriptsDir": "C:\\Users\\you\\StreamDeckScripts",
-  "ipcPipe": "\\\\.\\pipe\\mpv-cam",
   "mpvProcess": "mpvnet.exe",
+  "ipcPipe": "\\\\.\\pipe\\mpv-cam",
 
   "device": { "vendorId": "0xfff1", "productId": "0x0082", "usagePage": "0x0c" },
   "dial": { "rotateNext": "0x00e9", "rotatePrev": "0x00ea", "press": "0x00e2" },
 
   "cameras": [
-    { "name": "CAM 1", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
-    { "name": "CAM 2", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
-    { "name": "CAM 3", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" }
+    { "name": "Front Door", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
+    { "name": "Garage", "url": "rtsp://user:pass@192.168.1.50:554/stream1" }
   ]
 }

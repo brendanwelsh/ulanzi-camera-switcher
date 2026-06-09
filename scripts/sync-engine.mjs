@@ -16,3 +16,8 @@ const header =
 
 fs.writeFileSync(dest, header + fs.readFileSync(src, "utf8"));
 console.log("synced engine -> " + path.relative(root, dest));
+
+// also copy the bundled window-maximize helper so the plugin folder is self-contained
+const ps1Dest = path.join(root, "plugin", "com.ulanzi.camerascroller.ulanziPlugin", "plugin", "cam-center.ps1");
+fs.copyFileSync(path.join(root, "shared", "cam-center.ps1"), ps1Dest);
+console.log("synced cam-center.ps1 -> " + path.relative(root, ps1Dest));

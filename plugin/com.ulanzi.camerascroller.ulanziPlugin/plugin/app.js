@@ -24,16 +24,24 @@ const PLUGIN_UUID = "com.ulanzi.ulanzistudio.camerascroller";
 const ACTION_SCROLLER = PLUGIN_UUID + ".scroller";
 const ACTION_JUMP = PLUGIN_UUID + ".jump";
 
-function loadConfig() {
-  try {
-    const cfg = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
-    if (!cfg.nvr || !Array.isArray(cfg.cameras) || cfg.cameras.length === 0) return null;
-    cfg.ipcPipe = cfg.ipcPipe || "\\\\.\\pipe\\mpv-cam";
-    cfg.mpvProcess = cfg.mpvProcess || "mpvnet.exe";
-    return cfg;
-  } catch (e) {
-    return null;
-  }
+const MPV_DEFAULT = path.join(process.env.LOCALAPPDATA || "", "Programs", "mpv.net", "mpvnet.exe");
+
+// config.json is OPTIONAL now: it supplies mpv settings (+ optional fallback cameras). The camera list,
+// NVR host, and URL template are normally managed in the GUI (global settings); config.json is the fallback.
+function baseConfig() {
+  let file = {};
+  try { file = JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8")) || {}; } catch (e) {}
+  const fileCams = Array.isArray(file.cameras) ? file.cameras : [];
+  return {
+    mpvPath: file.mpvPath || MPV_DEFAULT,
+    mpvProcess: file.mpvProcess || "mpvnet.exe",
+    ipcPipe: file.ipcPipe || "\\\\.\\pipe\\mpv-cam",
+    scriptsDir: file.scriptsDir,               // legacy; the engine prefers its bundled cam-center.ps1
+    nvr: file.nvr || "",
+    urlTemplate: file.urlTemplate || "rtsps://{nvr}/{id}?enableSrtp",
+    cameras: fileCams,
+    _fileCameras: fileCams,
+  };
 }
 
 const $UD = new UlanziApi();
@@ -43,11 +51,23 @@ const log = (m) => {
   try { fs.appendFileSync(LOGFILE, new Date().toISOString() + " " + m + "\n"); } catch (e) {}
 };
 
-let cfg = loadConfig();
-let viewer = cfg ? new CameraViewer(cfg, log) : null;
+const cfg = baseConfig();
+const viewer = new CameraViewer(cfg, log);
 
-const camNames = () => (cfg ? cfg.cameras.map((c) => c.name) : []);
-const camIndexByName = (name) => (cfg ? cfg.cameras.findIndex((c) => c.name === name) : -1);
+// merge the GUI's global settings (nvr / urlTemplate / cameras) into the live config, in place
+function applyGlobal(g) {
+  if (!g || typeof g !== "object") return;
+  if (typeof g.nvr === "string") cfg.nvr = g.nvr;
+  if (typeof g.urlTemplate === "string" && g.urlTemplate) cfg.urlTemplate = g.urlTemplate;
+  if (Array.isArray(g.cameras)) cfg.cameras = g.cameras.length ? g.cameras : cfg._fileCameras;
+  if (viewer.idx >= cfg.cameras.length) viewer.idx = 0;
+  log(`config: ${cfg.cameras.length} cameras, NVR ${cfg.nvr || "(none)"}`);
+}
+
+const camNames = () => cfg.cameras.map((c) => c.name);
+// case/space-insensitive so an older saved name like "BACKYARD" still matches "Backyard"
+const norm = (s) => String(s == null ? "" : s).toLowerCase().replace(/[^a-z0-9]/g, "");
+const camIndexByName = (name) => (cfg && name ? cfg.cameras.findIndex((c) => norm(c.name) === norm(name)) : -1);
 const paramOf = (m) => m.param || m.payload || m.settings || {};
 
 // remember each jump button's chosen camera by context, so onRun is instant + robust
@@ -65,19 +85,23 @@ function rememberJump(message) {
 $UD.connect(PLUGIN_UUID);
 
 $UD.onConnected(() => {
-  log("connected; config " + (cfg ? `loaded (${cfg.cameras.length} cameras, NVR ${cfg.nvr})` : "MISSING — copy config.example.json to config.json"));
-  if (!cfg) $UD.toast("Camera Scroller: config.json missing");
+  log(`connected; ${cfg.cameras.length} cameras from config.json — requesting GUI settings…`);
+  try { $UD.getGlobalSettings(); } catch (e) {}
 });
+
+// camera list / NVR / template edited in the Camera Scroller's GUI (stored as global settings)
+$UD.onDidReceiveGlobalSettings((m) => applyGlobal(paramOf(m)));
 
 $UD.onAdd((message) => {
   // a Camera Button carries a cameraName in its settings; the Camera Scroller (dial) does not
   if (paramOf(message).cameraName) rememberJump(message);
-  else $UD.setStateIcon(message.context, 0, "CAMERAS");
+  else { $UD.setStateIcon(message.context, 0, "CAMERAS"); try { $UD.getSettings(message.context); } catch (e) {} }
 });
 
-// settings changed in a Property Inspector (host pushes them back to us)
+// settings changed in a PI, or returned from our getSettings() request after a restart
 $UD.onParamFromApp(rememberJump);
 $UD.onParamFromPlugin(rememberJump);
+$UD.onDidReceiveSettings(rememberJump);
 
 $UD.onClear((message) => {
   if (Array.isArray(message.param)) for (const it of message.param) jumpCam.delete(it.context);
@@ -85,25 +109,25 @@ $UD.onClear((message) => {
 
 // ── dial (Camera Scroller) ───────────────────────────────────────────────────
 $UD.onDialRotate((message) => {
-  if (!viewer) return $UD.showAlert(message.context);
+  if (!cfg.cameras.length) return $UD.showAlert(message.context);
   const dir = String(message.rotateEvent || "").includes("left") ? -1 : 1;
   const cam = viewer.rotate(dir);
   if (cam) $UD.setStateIcon(message.context, 0, cam.name);
 });
 
 $UD.onDialDown((message) => {
-  if (!viewer) return $UD.showAlert(message.context);
+  if (!cfg.cameras.length) return $UD.showAlert(message.context);
   const cam = viewer.togglePress();
   $UD.setStateIcon(message.context, 0, cam ? cam.name : "CAMERAS");
 });
 
 // ── keypad: a key press is always our only Keypad action (Camera Button) ──────
 $UD.onRun((message) => {
-  if (!viewer) { log("key press but config missing"); return $UD.showAlert(message.context); }
+  if (!cfg.cameras.length) { log("no cameras configured"); return $UD.showAlert(message.context); }
   const name = jumpCam.get(message.context) || paramOf(message).cameraName;
   const idx = camIndexByName(name);
   log(`key press -> "${name}" (idx ${idx})`);
-  if (idx < 0) return $UD.showAlert(message.context);
+  if (idx < 0) { try { $UD.getSettings(message.context); } catch (e) {} return $UD.showAlert(message.context); }
   viewer.jumpTo(idx);
 });
 

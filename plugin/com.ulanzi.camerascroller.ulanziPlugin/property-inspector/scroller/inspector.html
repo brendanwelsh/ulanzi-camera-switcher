@@ -8,37 +8,102 @@
   <script src="../../libs/js/timers.js"></script>
   <script src="../../libs/js/utils.js"></script>
   <script src="../../libs/js/ulanziApi.js"></script>
+  <style>
+    .grp { margin: 8px 0; }
+    .lbl { font-size: 12px; opacity: .8; margin-bottom: 3px; }
+    .full { width: 100%; box-sizing: border-box; }
+    .row { display: flex; gap: 6px; margin-bottom: 6px; align-items: center; }
+    .row .nm { flex: 0 0 34%; }
+    .row .st { flex: 1; }
+    .row .rm { flex: 0 0 30px; cursor: pointer; }
+    .hint { font-size: 11px; opacity: .6; line-height: 1.45; margin: 4px 0 10px; }
+    .addbtn { margin-top: 4px; }
+    h4 { margin: 14px 0 6px; font-size: 12px; opacity: .85; }
+  </style>
 </head>
 <body>
   <div class="uspi-wrapper">
-    <form id="property-inspector">
-      <div class="uspi-item">
-        <div class="uspi-item-label" data-localize>Dial</div>
-        <div class="uspi-item-value" style="font-size:12px;opacity:.8;line-height:1.5">
-          <b>Rotate</b> → next / previous camera.<br />
-          <b>Push</b> → open / close the maximized viewer.
-        </div>
-      </div>
-      <div class="uspi-item">
-        <div class="uspi-item-label" data-localize>Cameras</div>
-        <div class="uspi-item-value" id="summary" style="font-size:12px;opacity:.7">
-          configured in the plugin's <b>config.json</b>
-        </div>
-      </div>
-    </form>
+    <div class="grp">
+      <div class="lbl" data-localize>NVR host (optional)</div>
+      <input type="text" class="full" id="nvr" placeholder="192.168.1.10:7441" />
+    </div>
+    <div class="grp">
+      <div class="lbl" data-localize>URL template (optional)</div>
+      <input type="text" class="full" id="tmpl" placeholder="rtsps://{nvr}/{id}?enableSrtp" />
+    </div>
+    <div class="hint">
+      Template builds a URL from <code>{nvr}</code> + each camera's <code>{id}</code>. Default is UniFi
+      Protect. For other systems, leave the template alone and give each camera a full <b>URL</b> instead.
+    </div>
+
+    <h4 data-localize>Cameras</h4>
+    <div id="cams"></div>
+    <button class="addbtn" id="add" type="button">+ Add camera</button>
+    <div class="hint">
+      Each row: a <b>name</b> + either a full stream <b>URL</b> (<code>rtsp://…</code>, <code>http://…</code>)
+      or a camera <b>ID</b> (UniFi, used with the template above). Rotate the dial to scroll these; press
+      to open/close. Assign a "Camera Button" to a key to jump straight to one.
+    </div>
   </div>
 
   <script>
     $UD.connect("com.ulanzi.ulanzistudio.camerascroller.scroller");
-    $UD.onConnected(() => $UD.sendToPlugin({ type: "getCameras" }));
-    $UD.onSendToPropertyInspector((message) => {
-      const data = message.param || message.payload || message.settings || {};
-      if (data.type === "cameras") {
-        const n = (data.cameras || []).length;
-        const nvr = data.nvr ? " • NVR " + data.nvr : "";
-        document.getElementById("summary").textContent = n + " cameras" + nvr;
-      }
-    });
+
+    const camsEl = document.getElementById("cams");
+    const nvrEl = document.getElementById("nvr");
+    const tmplEl = document.getElementById("tmpl");
+    let saveTimer = null;
+
+    function addRow(cam) {
+      cam = cam || {};
+      const row = document.createElement("div");
+      row.className = "row";
+      row.innerHTML =
+        '<input class="nm" placeholder="Name" />' +
+        '<input class="st" placeholder="rtsp://…  or  camera ID" />' +
+        '<button class="rm" type="button" title="remove">✕</button>';
+      row.querySelector(".nm").value = cam.name || "";
+      row.querySelector(".st").value = cam.url || cam.id || "";
+      row.querySelector(".rm").addEventListener("click", () => { row.remove(); save(); });
+      row.querySelectorAll("input").forEach((i) => i.addEventListener("input", debouncedSave));
+      camsEl.appendChild(row);
+    }
+
+    function collect() {
+      const cameras = [];
+      camsEl.querySelectorAll(".row").forEach((row) => {
+        const name = row.querySelector(".nm").value.trim();
+        const stream = row.querySelector(".st").value.trim();
+        if (!name || !stream) return;
+        cameras.push(stream.includes("://") ? { name, url: stream } : { name, id: stream });
+      });
+      return {
+        nvr: nvrEl.value.trim(),
+        urlTemplate: tmplEl.value.trim() || "rtsps://{nvr}/{id}?enableSrtp",
+        cameras,
+      };
+    }
+
+    function save() { try { $UD.setGlobalSettings(collect()); } catch (e) {} }
+    function debouncedSave() { clearTimeout(saveTimer); saveTimer = setTimeout(save, 400); }
+
+    function load(g) {
+      g = g || {};
+      nvrEl.value = g.nvr || "";
+      tmplEl.value = g.urlTemplate || "";
+      camsEl.innerHTML = "";
+      (Array.isArray(g.cameras) ? g.cameras : []).forEach(addRow);
+      if (!camsEl.children.length) addRow(); // start with one empty row
+    }
+
+    document.getElementById("add").addEventListener("click", () => addRow());
+    nvrEl.addEventListener("input", debouncedSave);
+    tmplEl.addEventListener("input", debouncedSave);
+
+    $UD.onDidReceiveGlobalSettings((m) => load(m.settings || m.param || m.payload || {}));
+    // ask for the saved settings once the socket is up
+    setTimeout(() => { try { $UD.getGlobalSettings(); } catch (e) {} }, 300);
+    setTimeout(() => { if (!camsEl.children.length) addRow(); }, 1200); // ensure a row even if nothing saved yet
   </script>
 </body>
 </html>

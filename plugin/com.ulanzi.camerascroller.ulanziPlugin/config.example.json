@@ -1,15 +1,16 @@
 {
-  "_comment": "Copy this file to config.json (same folder) and fill in your real values. config.json is gitignored so your NVR address and camera IDs never reach git. Same schema as the standalone front-end.",
+  "_comment": "Copy to config.json (gitignored). Each camera is EITHER a full stream `url` (any RTSP/RTSPS/HTTP — UniFi, Reolink, Frigate, ONVIF...), OR an `id` that is built into a URL via `urlTemplate` + `nvr`. The default template is UniFi Protect; change it for other systems or just use `url` per camera.",
 
   "nvr": "NVR_HOST_OR_IP:7441",
+  "urlTemplate": "rtsps://{nvr}/{id}?enableSrtp",
+
   "mpvPath": "C:\\Users\\you\\AppData\\Local\\Programs\\mpv.net\\mpvnet.exe",
-  "scriptsDir": "C:\\Users\\you\\StreamDeckScripts",
-  "ipcPipe": "\\\\.\\pipe\\mpv-cam",
   "mpvProcess": "mpvnet.exe",
+  "ipcPipe": "\\\\.\\pipe\\mpv-cam",
 
   "cameras": [
-    { "name": "CAM 1", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
-    { "name": "CAM 2", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
-    { "name": "CAM 3", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" }
+    { "name": "Front Door", "id": "REPLACE_WITH_UNIFI_CAMERA_ID" },
+    { "name": "Garage", "url": "rtsp://user:pass@192.168.1.50:554/stream1" },
+    { "name": "Backyard", "url": "http://192.168.1.60:8080/video" }
   ]
 }

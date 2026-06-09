@@ -13,7 +13,12 @@
 // `cfg`. Nothing about a specific setup lives here.
 
 import net from "net";
+import fs from "fs";
+import path from "path";
 import { spawn, exec } from "child_process";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export class CameraViewer {
   constructor(cfg, log) {
@@ -26,7 +31,14 @@ export class CameraViewer {
   }
 
   get cams() { return this.cfg.cameras; }
-  camUrl(cam) { return `rtsps://${this.cfg.nvr}/${cam.id}?enableSrtp`; }
+  // Stream URL for a camera, camera-system agnostic:
+  //   1. a full per-camera `url` (any RTSP/RTSPS/HTTP — UniFi, Reolink, Frigate, ONVIF…) wins, else
+  //   2. build from `urlTemplate` + `nvr` + the camera `id` (template defaults to UniFi Protect).
+  camUrl(cam) {
+    if (cam.url) return cam.url;
+    const tmpl = this.cfg.urlTemplate || "rtsps://{nvr}/{id}?enableSrtp";
+    return tmpl.replace("{nvr}", this.cfg.nvr || "").replace("{id}", cam.id || "");
+  }
 
   // send one or more mpv JSON IPC commands over the named pipe (no-op if mpv isn't running)
   ipcMany(cmds) {
@@ -43,7 +55,9 @@ export class CameraViewer {
 
   // bring mpv onto the primary monitor + maximize + topmost (reuses the existing helper)
   maximize() {
-    const ps = `${this.cfg.scriptsDir}\\cam-center.ps1`;
+    // prefer the cam-center.ps1 bundled next to this engine; fall back to a configured scriptsDir
+    let ps = path.join(__dirname, "cam-center.ps1");
+    if (!fs.existsSync(ps) && this.cfg.scriptsDir) ps = `${this.cfg.scriptsDir}\\cam-center.ps1`;
     try {
       exec(`powershell -NoProfile -ExecutionPolicy Bypass -File "${ps}"`, () => {});
     } catch (e) { /* best effort */ }
