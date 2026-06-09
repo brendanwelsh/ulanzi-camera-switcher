@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Ulanzi dial -> UniFi Protect camera scroller. Two front-ends (standalone USB-HID daemon + Ulanzi Deck plugin) sharing one mpv viewer engine.",
+  "description": "Ulanzi dial -> live camera scroller (any RTSP/RTSPS/HTTP source). Two front-ends (standalone USB-HID daemon + Ulanzi Deck plugin) sharing one mpv viewer engine.",
   "scripts": {
     "start": "npm --prefix standalone start",
     "learn": "npm --prefix standalone run learn",

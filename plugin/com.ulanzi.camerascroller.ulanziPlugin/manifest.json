@@ -1,7 +1,7 @@
 {
   "Author": "Welsh",
   "Name": "Camera Scroller",
-  "Description": "Scroll and jump UniFi Protect cameras in a maximized mpv.net viewer, from the Ulanzi dial and buttons.",
+  "Description": "Scroll and jump live security cameras in a maximized mpv viewer, from the Ulanzi dial and buttons. Works with any RTSP/RTSPS/HTTP stream — UniFi Protect, Reolink, Frigate, ONVIF.",
   "Icon": "resources/pluginIcon.png",
   "Version": "1.0.0",
   "Category": "Camera Scroller",
