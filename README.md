@@ -44,6 +44,12 @@ npm run build            # bundles the shared engine + maximize helper into the 
 npm run install:plugin   # copies it into %APPDATA%\Ulanzi\UlanziDeck\Plugins\
 #   then fully quit + reopen Ulanzi Studio
 ```
+### One-tap dial layout (profile)
+Don't want to place actions by hand? Import the ready-made dial profile:
+**`profiles/Camera-Scroller.ulanziDeckProfile`** — in Ulanzi Studio (Dial selected) → Import.
+It drops **Camera Scroller** on the knob and three **Camera Button** keys (pick a camera in each).
+Regenerate/pre-bind with `powershell -File scripts\build-profile.ps1 [-DialUuid <yours>]`.
+
 In Ulanzi Studio you get two actions under **Camera Scroller**:
 - **Camera Scroller** → drop on the dial. Rotate = next/prev, press = open/close. **Its Property
   Inspector is the camera editor** — set the NVR + template and add/remove cameras (name + URL or ID)
