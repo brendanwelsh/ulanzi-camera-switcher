@@ -1,0 +1,162 @@
+11:20:38:616# sdkInit ( ver 2.0.33, date Sat Feb 28 18:35:24 2026 )
+11:20:38:617# registerDeviceConnectedCallbackListener
+11:20:38:617# registerDeviceDisconnectedCallbackListener
+11:20:38:617# registerDeviceMessageCallbackListener
+11:20:39:099# ##DeviceLink:  name Ulanzi Dial, deviceId 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534, connectType 1
+11:20:39:115# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: getDeviceName Ulanzi Dial
+11:20:39:115# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:39:115# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: getDeviceMacAddress ca610da79421
+11:20:39:115# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceFlashId
+11:20:39:116# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceSN
+11:20:39:116# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceVersion
+11:20:39:116# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:39:117# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceMotorStrength
+11:20:39:117# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:39:117# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceSleepTime
+11:20:39:117# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:39:118# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:39:118# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:39:316# AuthDevice success
+11:20:39:527# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"flashId":"425031523436350E01061C365603E778","type":"deviceFlashId"}
+11:20:39:528# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceSN
+11:20:39:529# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:39:706# SN offset 0, len 10
+11:20:39:707# SN offset 1, len 7
+11:20:39:707# SN code: A0D14I003U3714405
+11:20:39:708# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+11:20:39:737# SN offset 1, len 7
+11:20:39:827# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"customCode":"400037","type":"deviceVersion","version":"1.3.7.1"}
+11:20:40:006# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3905}
+11:20:40:009# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceMotorStrength
+11:20:40:010# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534£ºgetDeviceSleepTime
+11:20:40:010# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:40:010# findDevice successful: 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534
+11:20:40:127# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"type":"deviceMotorStrength","value":255}
+11:20:40:337# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+11:20:40:516# SN offset 0, len 10
+11:20:40:517# SN offset 1, len 7
+11:20:40:517# SN code: A0D14I003U3714405
+11:20:40:517# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+11:20:40:547# SN offset 1, len 7
+11:20:40:637# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"type":"deviceMotorStrength","value":255}
+11:20:40:847# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+11:20:58:427# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3905}
+11:21:18:438# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3905}
+11:21:38:479# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:21:58:519# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:22:18:530# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:22:38:570# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:22:58:610# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:23:18:621# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:23:38:662# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:23:58:702# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:24:18:712# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:24:38:753# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:24:58:793# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:25:18:803# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:25:38:844# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:25:58:884# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:26:18:895# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:26:38:935# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:26:59:035# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:27:18:987# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:27:39:027# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:27:59:067# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:28:19:077# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:28:39:119# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:28:47:157# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:158# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:217# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:218# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:248# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:249# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:278# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:307# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:548# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:47:758# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:47:908# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:47:938# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:47:968# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:47:998# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:47:999# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:028# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:058# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:088# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:118# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:237# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:268# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:357# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:48:359# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:48:389# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:48:628# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:48:928# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:48:958# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:48:988# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:49:138# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:49:227# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:49:348# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:49:468# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:49:528# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:49:768# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:49:798# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:49:828# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:49:917# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:49:918# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:49:948# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:49:978# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:50:188# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:50:218# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:50:248# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:50:337# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:51:658# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:51:658# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:51:687# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:51:718# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:51:808# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:51:868# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:51:928# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:51:988# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:52:018# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:52:078# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:52:228# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:52:288# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:52:318# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:52:319# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+11:28:52:768# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:52:798# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:52:947# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+11:28:59:159# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:29:19:168# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:29:39:239# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:29:59:279# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:30:19:260# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:30:39:301# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:30:59:341# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:31:19:352# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:31:39:392# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:31:59:433# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:32:19:443# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:32:39:483# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:32:59:523# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:33:19:535# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:33:39:575# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:33:59:615# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:34:19:626# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:34:39:666# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:34:59:707# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:35:19:718# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:35:39:757# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:35:59:798# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:36:19:808# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3904}
+11:36:39:849# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}
+11:36:59:889# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}
+11:37:19:900# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}
+11:37:27:460# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":3,"status":1,"type":"deviceKeyEvent"}
+11:37:27:460# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":2,"status":1,"type":"deviceKeyEvent"}
+11:37:27:489# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":3,"status":0,"type":"deviceKeyEvent"}
+11:37:27:520# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"index":2,"status":0,"type":"deviceKeyEvent"}
+11:37:39:940# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}
+11:37:59:981# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}
+11:38:19:992# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}
+11:38:40:061# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}
+11:39:00:072# 1D83F3DB-880C-4e3a-B7B5-BC9DA8000534: Message {"access":2,"battery":60,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3903}

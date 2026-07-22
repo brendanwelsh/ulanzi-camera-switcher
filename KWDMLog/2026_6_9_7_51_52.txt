@@ -1,0 +1,248 @@
+31:51:52:724# sdkInit ( ver 2.0.33, date Sat Feb 28 18:35:24 2026 )
+31:51:52:725# registerDeviceConnectedCallbackListener
+31:51:52:725# registerDeviceDisconnectedCallbackListener
+31:51:52:725# registerDeviceMessageCallbackListener
+31:51:53:206# ##DeviceLink:  name Ulanzi Dial, deviceId 68A29C7A-7A8B-43ba-912A-329A1D63CD63, connectType 1
+31:51:53:222# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: getDeviceName Ulanzi Dial
+31:51:53:222# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:222# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: getDeviceMacAddress ca610da79421
+31:51:53:223# 68A29C7A-7A8B-43ba-912A-329A1D63CD63£ºgetDeviceFlashId
+31:51:53:223# 68A29C7A-7A8B-43ba-912A-329A1D63CD63£ºgetDeviceSN
+31:51:53:223# 68A29C7A-7A8B-43ba-912A-329A1D63CD63£ºgetDeviceVersion
+31:51:53:223# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:224# 68A29C7A-7A8B-43ba-912A-329A1D63CD63£ºgetDeviceMotorStrength
+31:51:53:224# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:224# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:224# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:225# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:225# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:521# AuthDevice success
+31:51:53:731# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"flashId":"425031523436350E01061C365603E778","type":"deviceFlashId"}
+31:51:53:732# 68A29C7A-7A8B-43ba-912A-329A1D63CD63£ºgetDeviceSN
+31:51:53:732# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:53:941# SN offset 0, len 10
+31:51:53:942# SN offset 1, len 7
+31:51:53:942# SN code: A0D14I003U3714405
+31:51:53:942# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+31:51:53:971# SN offset 1, len 7
+31:51:54:031# SN offset 0, len 10
+31:51:54:032# SN offset 1, len 7
+31:51:54:061# SN offset 1, len 7
+31:51:54:121# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"customCode":"400037","type":"deviceVersion","version":"1.3.7.1"}
+31:51:54:301# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:51:54:303# 68A29C7A-7A8B-43ba-912A-329A1D63CD63£ºgetDeviceMotorStrength
+31:51:54:303# 68A29C7A-7A8B-43ba-912A-329A1D63CD63£ºgetDeviceSleepTime
+31:51:54:304# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:54:304# findDevice successful: 68A29C7A-7A8B-43ba-912A-329A1D63CD63
+31:51:54:482# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"type":"deviceMotorStrength","value":255}
+31:51:54:661# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+31:51:54:870# SN offset 0, len 10
+31:51:54:872# SN offset 1, len 7
+31:51:54:872# SN code: A0D14I003U3714405
+31:51:54:872# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+31:51:54:901# SN offset 1, len 7
+31:51:54:991# SN offset 0, len 10
+31:51:55:051# SN offset 1, len 7
+31:51:55:052# SN offset 1, len 7
+31:51:55:081# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"type":"deviceMotorStrength","value":255}
+31:51:55:261# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+31:52:03:032# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:52:23:072# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:52:43:082# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:53:03:123# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:53:23:164# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:53:30:603# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:723# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:724# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:754# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:754# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:783# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:814# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:814# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:873# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:903# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:30:933# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:30:963# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:025# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:053# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:054# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:084# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:113# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:114# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:143# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:144# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:173# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:233# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:31:473# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:31:503# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:31:563# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:31:684# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:42:963# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:43:174# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:53:43:354# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:43:413# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:43:833# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:43:983# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:44:764# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:44:823# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:44:854# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:44:944# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:44:974# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:45:004# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:45:184# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:45:185# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:45:273# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:45:453# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:45:455# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:45:813# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:45:873# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:45:874# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:45:993# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:46:204# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:205# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:233# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:384# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:384# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:444# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:684# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:714# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:715# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:743# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:744# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:774# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:775# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:803# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:804# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:834# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:864# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:865# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:894# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:954# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:46:984# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:014# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:044# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:073# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:104# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:134# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:134# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:164# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:224# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:225# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:314# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:343# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:47:523# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:554# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:584# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:614# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:615# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:644# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:645# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:704# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:734# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:763# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:793# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:824# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:854# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:884# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:885# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:914# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:943# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:47:974# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:48:004# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:49:023# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:49:054# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:49:174# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:49:383# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:49:534# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:49:564# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:49:594# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:49:654# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:49:655# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:49:893# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:49:894# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:49:923# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:50:225# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:254# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:255# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:284# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:285# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:374# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:463# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:524# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:525# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:584# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:735# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:764# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:823# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:824# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:854# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:884# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:913# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:50:974# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:034# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:094# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:095# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:184# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:185# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:215# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:274# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:51:424# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:484# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:573# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:604# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:605# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:634# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:663# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:664# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:693# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:783# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:903# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:934# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:51:964# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:054# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:114# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:204# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:233# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:264# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:323# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:414# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:415# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:444# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:445# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:504# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:53:52:654# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:52:654# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:52:684# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:52:685# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:52:774# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:52:863# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:53:073# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:53:53:254# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":1,"type":"deviceKeyEvent"}
+31:53:53:494# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":0,"type":"deviceKeyEvent"}
+31:53:53:793# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":1,"type":"deviceKeyEvent"}
+31:53:53:854# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":0,"type":"deviceKeyEvent"}
+31:53:54:304# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":1,"type":"deviceKeyEvent"}
+31:53:54:454# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":0,"type":"deviceKeyEvent"}
+31:53:54:844# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":1,"type":"deviceKeyEvent"}
+31:53:54:994# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":1,"status":0,"type":"deviceKeyEvent"}
+31:53:55:414# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":2,"status":1,"type":"deviceKeyEvent"}
+31:53:55:653# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":2,"status":0,"type":"deviceKeyEvent"}
+31:53:55:954# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":2,"status":1,"type":"deviceKeyEvent"}
+31:53:55:984# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":1,"type":"deviceKeyEvent"}
+31:53:56:165# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":0,"type":"deviceKeyEvent"}
+31:53:56:194# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":2,"status":0,"type":"deviceKeyEvent"}
+31:53:56:554# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":1,"type":"deviceKeyEvent"}
+31:53:56:854# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":0,"type":"deviceKeyEvent"}
+31:53:57:034# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":1,"type":"deviceKeyEvent"}
+31:53:57:184# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":0,"type":"deviceKeyEvent"}
+31:53:57:603# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":2,"status":1,"type":"deviceKeyEvent"}
+31:53:57:754# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":1,"type":"deviceKeyEvent"}
+31:53:57:844# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":3,"status":0,"type":"deviceKeyEvent"}
+31:53:57:903# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":2,"status":0,"type":"deviceKeyEvent"}
+31:54:03:215# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:54:10:265# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:54:10:294# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:54:10:324# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:54:10:684# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:54:23:255# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:54:43:265# 68A29C7A-7A8B-43ba-912A-329A1D63CD63: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}

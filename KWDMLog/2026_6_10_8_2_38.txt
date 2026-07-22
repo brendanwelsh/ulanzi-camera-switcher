@@ -1,0 +1,138 @@
+08:02:38:505# sdkInit ( ver 2.0.33, date Sat Feb 28 18:35:24 2026 )
+08:02:38:505# registerDeviceConnectedCallbackListener
+08:02:38:505# registerDeviceDisconnectedCallbackListener
+08:02:38:505# registerDeviceMessageCallbackListener
+08:02:38:977# ##DeviceLink:  name Ulanzi Dial, deviceId 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9, connectType 1
+08:02:38:978# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: getDeviceName Ulanzi Dial
+08:02:38:978# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:38:978# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: getDeviceMacAddress ca610da79421
+08:02:38:978# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceFlashId
+08:02:38:979# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceSN
+08:02:38:979# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceVersion
+08:02:38:979# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:38:980# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceBattery
+08:02:38:980# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:38:980# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceSleepTime
+08:02:38:980# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:38:981# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:38:981# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:39:286# AuthDevice success
+08:02:39:496# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"flashId":"425031523436350E01061C365603E778","type":"deviceFlashId"}
+08:02:39:496# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceSN
+08:02:39:497# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:39:707# SN offset 0, len 10
+08:02:39:707# SN offset 1, len 7
+08:02:39:708# SN code: A0D14I003U3714405
+08:02:39:708# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+08:02:39:736# SN offset 1, len 7
+08:02:39:765# SN offset 0, len 10
+08:02:39:795# SN offset 1, len 7
+08:02:39:797# SN offset 1, len 7
+08:02:39:885# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"customCode":"400037","type":"deviceVersion","version":"1.3.7.1"}
+08:02:40:006# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:02:40:008# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceMotorStrength
+08:02:40:008# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9£ºgetDeviceSleepTime
+08:02:40:009# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:40:009# findDevice successful: 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9
+08:02:40:217# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"type":"deviceMotorStrength","value":255}
+08:02:40:395# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+08:02:40:516# SN offset 0, len 10
+08:02:40:517# SN offset 1, len 7
+08:02:40:517# SN code: A0D14I003U3714405
+08:02:40:517# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+08:02:40:546# SN offset 1, len 7
+08:02:40:696# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"type":"deviceMotorStrength","value":255}
+08:02:40:816# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+08:02:44:026# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:02:46:066# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:02:56:267# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:03:04:067# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:03:24:107# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:03:34:067# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":5,"status":1,"type":"deviceKeyEvent"}
+08:03:34:158# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":5,"status":0,"type":"deviceKeyEvent"}
+08:03:44:088# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:04:04:157# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:04:24:169# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:04:44:208# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:04:49:728# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:04:55:549# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:05:04:220# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:05:17:510# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:05:24:260# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:05:44:271# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:06:04:310# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:06:19:041# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:19:131# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:19:491# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:19:551# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:19:552# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:19:640# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:19:730# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:19:850# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:19:970# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:20:960# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":5,"status":1,"type":"deviceKeyEvent"}
+08:06:21:111# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":5,"status":0,"type":"deviceKeyEvent"}
+08:06:21:501# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":5,"status":1,"type":"deviceKeyEvent"}
+08:06:21:650# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":5,"status":0,"type":"deviceKeyEvent"}
+08:06:22:011# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:011# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:161# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:191# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:341# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:491# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:551# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:552# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:611# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:22:671# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:23:181# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":7,"status":1,"type":"deviceKeyEvent"}
+08:06:23:182# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":7,"status":0,"type":"deviceKeyEvent"}
+08:06:23:541# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:23:751# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:810# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:811# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:841# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:842# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:871# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:901# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:931# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:961# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:23:990# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:021# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:021# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:050# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:051# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:080# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:110# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:140# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:200# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:231# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:321# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:351# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:06:24:380# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+08:06:24:441# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:470# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:471# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:501# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:502# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:561# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:562# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:591# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:592# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:620# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:650# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:651# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:710# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:24:711# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+08:06:44:362# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:07:04:402# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:07:24:443# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:07:44:483# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:08:04:494# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:08:24:533# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+08:08:44:574# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:09:04:585# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:09:24:626# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:09:44:636# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:10:04:676# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:10:24:717# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}
+08:10:44:727# 28381DEF-B710-4b7f-B6C6-ABB729E8C9A9: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3914}

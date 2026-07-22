@@ -1,0 +1,73 @@
+31:55:00:321# sdkInit ( ver 2.0.33, date Sat Feb 28 18:35:24 2026 )
+31:55:00:322# registerDeviceConnectedCallbackListener
+31:55:00:322# registerDeviceDisconnectedCallbackListener
+31:55:00:322# registerDeviceMessageCallbackListener
+31:55:00:803# ##DeviceLink:  name Ulanzi Dial, deviceId DB8D90CD-E768-4b33-B597-8E5E98D9FF12, connectType 1
+31:55:00:818# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: getDeviceName Ulanzi Dial
+31:55:00:818# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:00:818# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: getDeviceMacAddress ca610da79421
+31:55:00:818# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceFlashId
+31:55:00:819# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceSN
+31:55:00:819# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceVersion
+31:55:00:819# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:00:820# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceBattery
+31:55:00:820# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:00:820# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceMotorStrength
+31:55:00:820# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:00:820# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:00:821# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:00:821# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:01:146# AuthDevice success
+31:55:01:355# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"flashId":"425031523436350E01061C365603E778","type":"deviceFlashId"}
+31:55:01:356# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceSN
+31:55:01:356# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:01:565# SN offset 0, len 10
+31:55:01:566# SN offset 1, len 7
+31:55:01:566# SN code: A0D14I003U3714405
+31:55:01:566# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+31:55:01:595# SN offset 1, len 7
+31:55:01:745# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"customCode":"400037","type":"deviceVersion","version":"1.3.7.1"}
+31:55:02:015# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:55:02:016# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceMotorStrength
+31:55:02:017# DB8D90CD-E768-4b33-B597-8E5E98D9FF12£ºgetDeviceSleepTime
+31:55:02:017# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:02:017# findDevice successful: DB8D90CD-E768-4b33-B597-8E5E98D9FF12
+31:55:02:165# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"type":"deviceMotorStrength","value":255}
+31:55:02:376# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+31:55:02:555# SN offset 0, len 10
+31:55:02:556# SN offset 1, len 7
+31:55:02:557# SN code: A0D14I003U3714405
+31:55:02:557# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"code":"A0D14I003U3714405","type":"deviceSN"}
+31:55:02:585# SN offset 1, len 7
+31:55:02:705# SN offset 0, len 10
+31:55:02:706# SN offset 1, len 7
+31:55:02:735# SN offset 1, len 7
+31:55:02:765# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"type":"deviceMotorStrength","value":255}
+31:55:03:066# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":1,"time":7200,"type":"deviceSleepTime"}
+31:55:03:305# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:55:23:346# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:55:28:956# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":5,"status":1,"type":"deviceKeyEvent"}
+31:55:29:016# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":5,"status":0,"type":"deviceKeyEvent"}
+31:55:32:226# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":5,"status":1,"type":"deviceKeyEvent"}
+31:55:32:286# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":8,"status":1,"type":"deviceKeyEvent"}
+31:55:32:466# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":8,"status":0,"type":"deviceKeyEvent"}
+31:55:32:467# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":5,"status":0,"type":"deviceKeyEvent"}
+31:55:43:356# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:56:03:397# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:56:23:438# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:56:43:417# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:56:43:448# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:56:43:598# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:56:43:659# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:56:43:688# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:56:43:717# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:56:43:808# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":10,"status":1,"type":"deviceKeyEvent"}
+31:56:44:198# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":9,"status":1,"type":"deviceKeyEvent"}
+31:57:03:489# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:57:23:559# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:57:29:019# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":5,"status":1,"type":"deviceKeyEvent"}
+31:57:29:109# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"index":5,"status":0,"type":"deviceKeyEvent"}
+31:57:43:539# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:58:03:580# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:58:23:620# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
+31:58:43:630# DB8D90CD-E768-4b33-B597-8E5E98D9FF12: Message {"access":2,"battery":70,"chargeFull":0,"charging":0,"lowbat":0,"powerOff":0,"type":"deviceBattery","voltage":3915}
