@@ -72,12 +72,16 @@ export class CameraViewer {
     if (fresh) {
       // fresh launch: new window with an IPC pipe so later switches are in-place
       try {
-        spawn(this.cfg.mpvPath, [
+        // spawn reports a missing/wrong mpv path through an async 'error' event, not a throw;
+        // with no listener that event crashed the whole plugin / daemon. Log it instead.
+        const child = spawn(this.cfg.mpvPath, [
           "--ontop=yes", "--input-ipc-server=" + this.cfg.ipcPipe,
           "--osd-font-size=40", "--osd-align-x=center", "--osd-align-y=center",
           "--force-media-title=" + cam.name, "--title=" + cam.name, "--osd-playing-msg=",
           "--geometry=1280x720+960+540", this.camUrl(cam),
-        ], { detached: true, stdio: "ignore" }).unref();
+        ], { detached: true, stdio: "ignore" });
+        child.on("error", (e) => { this.open = false; this.log("mpv launch failed: " + e.message); });
+        child.unref();
       } catch (e) { this.log("mpv launch failed: " + e.message); }
       this.maximize();
     } else {
